@@ -1,3 +1,6 @@
+import { FcGlobe } from 'react-icons/fc';
+import { RxLinkedinLogo, RxGithubLogo } from 'react-icons/rx';
+
 const Footer = () => {
   const date = new Date().getFullYear();
 
@@ -7,13 +10,13 @@ const Footer = () => {
         <p>contactarme por:</p>
         <div className="redes">
           <a href="https://www.linkedin.com/in/julian-aguilar-" target="_blank">
-            Linkedin 
+            <RxLinkedinLogo />
           </a>
           <a href="https://github.com/lobonjulian" target="_blank">
-            Github 
+            <RxGithubLogo />
           </a>
-          <a href="hhttps://jl-portfolio-cv.netlify.app/" target="_blank">
-            Globe 
+          <a href="https://jl-portfolio-cv.netlify.app/" target="_blank">
+            <FcGlobe />
           </a>
         </div>
       </div>
