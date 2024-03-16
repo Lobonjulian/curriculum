@@ -5,7 +5,7 @@ const Footer = () => {
   const date = new Date().getFullYear();
 
   return (
-    <footer className="footer flex-col">
+    <footer className="m-top flex-col">
       <div className="redes-sociales">
         <p>contactarme por:</p>
         <div className="redes">

@@ -3,12 +3,12 @@ import Buttons, { DeleteButton } from './Buttons';
 
 export default function Education({ state, setState }) {
   return (
-    <section>
-      <h2>Education </h2>
+    <section className="flex-col">
+      <h2>Section Education </h2>
       <div>
         {state.map((item, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="flex-col">
               <InputText
                 index={index}
                 feature={'school'}
@@ -27,7 +27,7 @@ export default function Education({ state, setState }) {
                 index={index}
                 feature={'startDate'}
                 label={'Start Date'}
-                type={'date'}
+                type={'month'}
                 state={state}
                 setState={setState}
               />
@@ -35,7 +35,7 @@ export default function Education({ state, setState }) {
                 index={index}
                 feature={'endDate'}
                 label={'end Date'}
-                type={'date'}
+                type={'month'}
                 state={state}
                 setState={setState}
               />
@@ -52,17 +52,19 @@ export default function Education({ state, setState }) {
           );
         })}
       </div>
-      <Buttons handleClick={() => {
-        const newValue = [...state];
-        newValue.push({
-          school: '',
-          degree: '',
-          startDate: '',
-          endDate: '',
-          description: '',
-        })
-        setState(newValue);
-      }} />
+      <Buttons
+        handleClick={() => {
+          const newValue = [...state];
+          newValue.push({
+            school: '',
+            degree: '',
+            startDate: '',
+            endDate: '',
+            description: '',
+          });
+          setState(newValue);
+        }}
+      />
     </section>
   );
 }

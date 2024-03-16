@@ -9,7 +9,7 @@ export default function Accordion({ title, children }) {
   };
 
   return (
-    <div className="accordion">
+    <div className="m-top">
       <h3 className="accordion-title" onClick={handleToggleShow}>
         {showState ? <FiChevronsDown /> : <FiChevronsUp/>}
          {''} {title}

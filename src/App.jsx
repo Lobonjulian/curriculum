@@ -28,7 +28,15 @@ function App() {
       fieldOfStudy: 'Estimated 5 years',
       startDate: '2020-06',
       endDate: '2024-06',
-      description: "I'm a big fan of the moon",
+      description: "Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?",
+    },
+    {
+      school: 'Moon Space Lab',
+      degree: 'BSc Kerbal Science',
+      fieldOfStudy: 'Estimated 5 years',
+      startDate: '2020-06',
+      endDate: '2024-06',
+      description: "Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?",
     },
   ]);
 
@@ -38,13 +46,15 @@ function App() {
       job: 'Frontend Developer',
       startDate: '2021-12',
       endDate: '2023-12',
-      description: 'lorem ipums',
+      description: 'Incididunt anim adipisicing tempor minim irure velit ad excepteur laborum non est. Do incididunt eiusmod dolore nisi aliqua. Non officia in laboris dolore qui consequat velit qui. Est veniam qui culpa minim duis. Reprehenderit sint eiusmod esse tempor pariatur non irure labore cillum.',
     },
   ]);
+  
   return (
     <>
       <Header />
-      <main>
+      <main className='main'>
+     <article className="info">
         <Accordion title={'Personal Info'}>
           <Personal state={state} setState={setState} />
         </Accordion>
@@ -54,14 +64,15 @@ function App() {
         <Accordion title={'Experience'}>
           <Experience state={experiencie} setState={setExperience} />
         </Accordion>
-      </main>
-      <aside>
+    </article>
+        <aside className='aside'>
         <CVPreview
           education={education}
           experience={experiencie}
           personal={state}
         />
-      </aside>
+          </aside>
+      </main>
       <Footer />
     </>
   );

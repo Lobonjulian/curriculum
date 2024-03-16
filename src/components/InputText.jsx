@@ -1,6 +1,13 @@
-export default function InputText({ feature, label, type = "text" , index, state, setState}) {
+export default function InputText({
+  feature,
+  label,
+  type = 'text',
+  index,
+  state,
+  setState,
+}) {
   return (
-    <div>
+    <div className="flex-col">
       <label>{label}</label>
       <input
         id={feature}
@@ -19,9 +26,10 @@ export default function InputText({ feature, label, type = "text" , index, state
 
 export function TextArea({ label, index, state, setState, feature }) {
   return (
-    <div>
+    <div className="flex-col">
       <label>{label}</label>
       <textarea
+        className="textarea"
         id={feature}
         value={state[index][feature]}
         onChange={(e) => {

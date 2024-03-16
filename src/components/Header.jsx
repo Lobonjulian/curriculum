@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <header className="header flex-col">
+    <header className="m-bottom flex-col">
       <h1>CV App</h1>
-      <p>App para crear un CV de manera sencilla y rápida</p>
+      <p className="header-p">App para crear un CV de manera sencilla y rápida</p>
     </header>
   );
 };

@@ -3,12 +3,12 @@ import InputText, { TextArea } from './InputText';
 
 export default function Experience({ state, setState }) {
   return (
-    <section>
-      <h2>Experience</h2>
+    <section className='flex-col'>
+      <h2>Section Experience</h2>
       <div>
         {state.map((job, index) => {
           return (
-            <div key={index}>
+            <div key={index} className='flex-col'>
               <InputText
                 index={index}
                 feature="job"
@@ -27,7 +27,7 @@ export default function Experience({ state, setState }) {
                 index={index}
                 feature="startDate"
                 label="Start Date"
-                type={'date'}
+                type={'month'}
                 state={state}
                 setState={setState}
               />
@@ -35,7 +35,7 @@ export default function Experience({ state, setState }) {
                 index={index}
                 feature="endDate"
                 label="endDate"
-                type="date"
+                type={'month'}
                 state={state}
                 setState={setState}
               />
@@ -51,7 +51,7 @@ export default function Experience({ state, setState }) {
           );
         })}
 
-        <Buttons
+        <Buttons 
           handleClick={() => {
             const newValue = [...state];
             newValue.push({

@@ -4,7 +4,7 @@ export default function Personal({ state, setState }) {
   return (
     <div>
       <h2>Info Personal</h2>
-      <form>
+      <form className="form flex-col">
       <InputText
         index={0}
         feature={'firstName'}
