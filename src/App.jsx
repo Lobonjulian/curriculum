@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Personal from './components/Personal';
 import Education from './components/Education';
 import Experience from './components/Experience';
+import CVPreview from './components/CVPreview';
 
 function App() {
   const [state, setState] = useState([
@@ -54,7 +55,13 @@ function App() {
           <Experience state={experiencie} setState={setExperience} />
         </Accordion>
       </main>
-
+      <aside>
+        <CVPreview
+          education={education}
+          experience={experiencie}
+          personal={state}
+        />
+      </aside>
       <Footer />
     </>
   );
