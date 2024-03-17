@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './styles/App.css';
 import Accordion from './components/Accordion';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -7,6 +7,7 @@ import Personal from './components/Personal';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import CVPreview from './components/CVPreview';
+import Skills from './components/Skills';
 
 function App() {
   const [state, setState] = useState([
@@ -50,6 +51,29 @@ function App() {
     },
   ]);
   
+ const  [skills, setSkills] = useState([
+   {
+     name: 'HTML',
+     level: 80, 
+     years: 3,
+   }, 
+   {
+     name: 'CSS',
+     level: 70, 
+     years: 3,
+   },
+   { 
+     name: 'JavaScript',
+     level: 60, 
+     years: 3,
+   },
+   {
+     name: 'React',
+     level: 60, 
+     years: 3,
+   }
+ ]);
+
   return (
     <>
       <Header />
@@ -64,12 +88,16 @@ function App() {
         <Accordion title={'Experience'}>
           <Experience state={experiencie} setState={setExperience} />
         </Accordion>
+        <Accordion title={'Skills'}>
+          <Skills skills={skills} setSkills={setSkills} />
+        </Accordion>
     </article>
         <aside className='aside'>
         <CVPreview
           education={education}
           experience={experiencie}
           personal={state}
+          skills={skills}
         />
           </aside>
       </main>
